@@ -1,0 +1,29 @@
+{
+  "name": "two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.1.0",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "allure-commandline": "^2.24.0",
+    "cypress": "12.14.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.6.0",
+    "rimraf": "^5.0.1"
+  },
+  "scripts": {
+    "start": "npx cypress open",
+    "regression-allureCh": "cypress run --browser chrome --spec cypress/e2e/orangeHr/report-employee-spec.cy.ts --env allure=true",
+    "regression-allureEl": "cypress run --spec cypress/e2e/orangeHr/report-employee-spec.cy.ts --env allure=true",
+    "allure:clean": "rm -r allure-results/ allure-report cypress/screenshots cypress/videos || true",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-report/history && rm -r allure-report || true",
+    "cypress": "npm run allure:clean && npx cypress run --browser electron --spec cypress/e2e/orangeHr/report-employee-spec.cy.ts --env allure=true && npm run allure:report"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
+  }
+}
