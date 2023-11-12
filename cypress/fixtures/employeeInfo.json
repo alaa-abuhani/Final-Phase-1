@@ -1,0 +1,21 @@
+[
+  {
+    "firstName": "alaa12",
+    "lastName": "abuhani",
+    "id": "10010"
+  },
+  { "firstName": "alaa32", "lastName": "abuhani", "id": "10011" },
+  {
+    "firstName": "alaa145",
+    "lastName": "abuhani",
+    "id": "10012"
+  },
+  {
+    "jobTitle": "CiVil Engineer12",
+    "locationName": "Amman123",
+    "countryCode": "JO",
+    "salaryComponent": "5000",
+    "salaryAmount": "6000",
+    "currencyId": "JOD"
+  }
+]
